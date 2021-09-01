@@ -43,6 +43,16 @@
             BouncingBallWithVector
           </router-link>
         </li>
+        <li>
+          <router-link :to="{ name: 'VectorSubstraction' }">
+            VectorSubstraction
+          </router-link>
+        </li>
+        <li>
+          <router-link :to="{ name: 'VectorMagnitude' }">
+            VectorMagnitude
+          </router-link>
+        </li>
       </ul>
     </section>
   </div>

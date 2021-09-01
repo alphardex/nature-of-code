@@ -8,6 +8,8 @@ import Gaussian from "../views/Gaussian.vue";
 import PerlinNoise from "../views/PerlinNoise.vue";
 import BouncingBallNoVector from "../views/BouncingBallNoVector.vue";
 import BouncingBallWithVector from "../views/BouncingBallWithVector.vue";
+import VectorSubstraction from "../views/VectorSubstraction.vue";
+import VectorMagnitude from "../views/VectorMagnitude.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -49,6 +51,16 @@ const routes: Array<RouteRecordRaw> = [
     path: "/bouncing-ball-with-vector",
     name: "BouncingBallWithVector",
     component: BouncingBallWithVector,
+  },
+  {
+    path: "/vector-substraction",
+    name: "VectorSubstraction",
+    component: VectorSubstraction,
+  },
+  {
+    path: "/vector-magnitude",
+    name: "VectorMagnitude",
+    component: VectorMagnitude,
   },
   {
     path: "/:pathMatch(.*)*",
