@@ -7,14 +7,8 @@ class Mover {
   acceleration: p5.Vector;
   constructor(s: p5) {
     this.s = s;
-    this.position = this.s.createVector(
-      this.s.random(this.s.width),
-      this.s.random(this.s.height)
-    );
-    this.velocity = this.s.createVector(
-      this.s.random(-2, 2),
-      this.s.random(-2, 2)
-    );
+    this.position = this.s.createVector(this.s.width / 2, this.s.height / 2);
+    this.velocity = this.s.createVector(0, 0);
     this.acceleration = this.s.createVector(-0.001, 0.01);
   }
   update() {
