@@ -14,9 +14,9 @@ class Mover {
     this.topSpeed = 10;
   }
   update() {
-    this.position.add(this.velocity);
     this.velocity.add(this.acceleration);
     this.velocity.limit(this.topSpeed);
+    this.position.add(this.velocity);
   }
   checkEdge() {
     if (this.position.x > this.s.width) {
