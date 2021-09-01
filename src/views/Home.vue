@@ -53,6 +53,11 @@
             VectorMagnitude
           </router-link>
         </li>
+        <li>
+          <router-link :to="{ name: 'VectorNormalize' }">
+            VectorNormalize
+          </router-link>
+        </li>
       </ul>
     </section>
   </div>

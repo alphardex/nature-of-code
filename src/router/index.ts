@@ -10,6 +10,7 @@ import BouncingBallNoVector from "../views/BouncingBallNoVector.vue";
 import BouncingBallWithVector from "../views/BouncingBallWithVector.vue";
 import VectorSubstraction from "../views/VectorSubstraction.vue";
 import VectorMagnitude from "../views/VectorMagnitude.vue";
+import VectorNormalize from "../views/VectorNormalize.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -61,6 +62,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/vector-magnitude",
     name: "VectorMagnitude",
     component: VectorMagnitude,
+  },
+  {
+    path: "/vector-normalize",
+    name: "VectorNormalize",
+    component: VectorNormalize,
   },
   {
     path: "/:pathMatch(.*)*",
