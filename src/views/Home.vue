@@ -1,35 +1,45 @@
 <template>
   <div class="relative min-h-screen">
-    <ul>
-      <li>
-        1.Introduction
-      </li>
-      <li>
-        <router-link :to="{ name: 'RandomWalkTraditional' }">
-          RandomWalkTraditional
-        </router-link>
-      </li>
-      <li>
-        <router-link :to="{ name: 'RandomDistribution' }">
-          RandomDistribution
-        </router-link>
-      </li>
-      <li>
-        <router-link :to="{ name: 'RandomWalkerTend' }">
-          RandomWalkerTend
-        </router-link>
-      </li>
-      <li>
-        <router-link :to="{ name: 'Gaussian' }">
-          Gaussian
-        </router-link>
-      </li>
-      <li>
-        <router-link :to="{ name: 'PerlinNoise' }">
-          PerlinNoise
-        </router-link>
-      </li>
-    </ul>
+    <section>
+      <h1>0.Introduction</h1>
+      <ul>
+        <li>
+          <router-link :to="{ name: 'RandomWalkTraditional' }">
+            RandomWalkTraditional
+          </router-link>
+        </li>
+        <li>
+          <router-link :to="{ name: 'RandomDistribution' }">
+            RandomDistribution
+          </router-link>
+        </li>
+        <li>
+          <router-link :to="{ name: 'RandomWalkerTend' }">
+            RandomWalkerTend
+          </router-link>
+        </li>
+        <li>
+          <router-link :to="{ name: 'Gaussian' }">
+            Gaussian
+          </router-link>
+        </li>
+        <li>
+          <router-link :to="{ name: 'PerlinNoise' }">
+            PerlinNoise
+          </router-link>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h1>1.Vector</h1>
+      <ul>
+        <li>
+          <router-link :to="{ name: 'BouncingBallNoVector' }">
+            BouncingBallNoVector
+          </router-link>
+        </li>
+      </ul>
+    </section>
   </div>
 </template>
 

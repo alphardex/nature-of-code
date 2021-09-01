@@ -6,6 +6,7 @@ import RandomDistribution from "../views/RandomDistribution.vue";
 import RandomWalkerTend from "../views/RandomWalkerTend.vue";
 import Gaussian from "../views/Gaussian.vue";
 import PerlinNoise from "../views/PerlinNoise.vue";
+import BouncingBallNoVector from "../views/BouncingBallNoVector.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -37,6 +38,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/perlin-noise",
     name: "PerlinNoise",
     component: PerlinNoise,
+  },
+  {
+    path: "/bouncing-ball-no-vector",
+    name: "BouncingBallNoVector",
+    component: BouncingBallNoVector,
   },
   {
     path: "/:pathMatch(.*)*",
