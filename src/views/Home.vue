@@ -68,6 +68,11 @@
             MotionAccelerationConstant
           </router-link>
         </li>
+        <li>
+          <router-link :to="{ name: 'MotionAccelerationRandom' }">
+            MotionAccelerationRandom
+          </router-link>
+        </li>
       </ul>
     </section>
   </div>
