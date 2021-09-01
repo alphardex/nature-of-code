@@ -6,16 +6,11 @@ const sketch = (s: p5) => {
 
   const setup = () => {
     s.createCanvas(s.windowWidth, s.windowHeight);
-
-    s.background(127);
   };
 
   const draw = () => {
     let index = s.floor(s.random(total));
     randomCounts[index] += 1;
-
-    s.strokeWeight(2);
-    s.fill(255);
 
     let w = s.width / total;
 

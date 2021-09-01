@@ -1,8 +1,6 @@
 <template>
   <div class="relative min-h-screen">
-    <div
-      class="bouncing-ball-no-vector w-screen h-screen flex-center bg-black-1"
-    ></div>
+    <div class="bouncing-ball-no-vector w-screen h-screen flex-center"></div>
   </div>
 </template>
 

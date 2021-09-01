@@ -13,8 +13,6 @@ class Walker {
     );
   }
   display() {
-    this.s.stroke(0);
-    this.s.fill(51);
     this.s.ellipse(this.position.x, this.position.y, 48, 48);
   }
   step() {
@@ -41,8 +39,6 @@ const sketch = (s: p5) => {
 
   const setup = () => {
     s.createCanvas(s.windowWidth, s.windowHeight);
-
-    s.noStroke();
 
     walker = new Walker(s);
   };

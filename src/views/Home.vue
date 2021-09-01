@@ -38,6 +38,11 @@
             BouncingBallNoVector
           </router-link>
         </li>
+        <li>
+          <router-link :to="{ name: 'BouncingBallWithVector' }">
+            BouncingBallWithVector
+          </router-link>
+        </li>
       </ul>
     </section>
   </div>

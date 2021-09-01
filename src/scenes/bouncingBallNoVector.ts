@@ -8,8 +8,6 @@ const sketch = (s: p5) => {
 
   const setup = () => {
     s.createCanvas(s.windowWidth, s.windowHeight);
-
-    s.background(255);
   };
 
   const draw = () => {

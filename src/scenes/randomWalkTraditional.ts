@@ -10,7 +10,6 @@ class Walker {
     this.y = s.height / 2;
   }
   display() {
-    this.s.stroke(0);
     this.s.point(this.x, this.y);
   }
   step() {
@@ -26,9 +25,6 @@ const sketch = (s: p5) => {
 
   const setup = () => {
     s.createCanvas(s.windowWidth, s.windowHeight);
-
-    s.noStroke();
-    s.background(255);
 
     walker = new Walker(s);
   };

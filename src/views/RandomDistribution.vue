@@ -1,8 +1,6 @@
 <template>
   <div class="relative min-h-screen">
-    <div
-      class="random-distribution w-screen h-screen flex-center bg-black-1"
-    ></div>
+    <div class="random-distribution w-screen h-screen flex-center"></div>
   </div>
 </template>
 

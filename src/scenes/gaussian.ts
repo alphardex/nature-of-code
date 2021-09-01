@@ -5,7 +5,6 @@ const sketch = (s: p5) => {
     s.createCanvas(s.windowWidth, s.windowHeight);
 
     s.noStroke();
-    s.background(127);
   };
 
   const draw = () => {

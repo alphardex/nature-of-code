@@ -1,21 +1,21 @@
 <template>
   <div class="relative min-h-screen">
-    <div class="random-walk-traditional w-screen h-screen flex-center"></div>
+    <div class="bouncing-ball-with-vector w-screen h-screen flex-center"></div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, onMounted } from "vue";
 import p5 from "p5";
-import sketch from "@/scenes/randomWalkTraditional";
+import sketch from "@/scenes/bouncingBallWithVector";
 
 export default defineComponent({
-  name: "RandomWalkTraditional",
+  name: "BouncingBallWithVector",
   setup() {
     const start = () => {
       new p5(
         sketch,
-        document.querySelector(".random-walk-traditional") as HTMLElement
+        document.querySelector(".bouncing-ball-with-vector") as HTMLElement
       );
     };
     onMounted(() => {
