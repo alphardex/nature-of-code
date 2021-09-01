@@ -12,6 +12,7 @@ import VectorSubstraction from "../views/VectorSubstraction.vue";
 import VectorMagnitude from "../views/VectorMagnitude.vue";
 import VectorNormalize from "../views/VectorNormalize.vue";
 import MotionBasic from "../views/MotionBasic.vue";
+import MotionAccelerationConstant from "../views/MotionAccelerationConstant.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -73,6 +74,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/motion-basic",
     name: "MotionBasic",
     component: MotionBasic,
+  },
+  {
+    path: "/motion-acceleration-constant",
+    name: "MotionAccelerationConstant",
+    component: MotionAccelerationConstant,
   },
   {
     path: "/:pathMatch(.*)*",

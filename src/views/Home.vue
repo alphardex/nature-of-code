@@ -63,6 +63,11 @@
             MotionBasic
           </router-link>
         </li>
+        <li>
+          <router-link :to="{ name: 'MotionAccelerationConstant' }">
+            MotionAccelerationConstant
+          </router-link>
+        </li>
       </ul>
     </section>
   </div>
