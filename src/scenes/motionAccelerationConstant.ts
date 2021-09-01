@@ -5,16 +5,18 @@ class Mover {
   position: p5.Vector;
   velocity: p5.Vector;
   acceleration: p5.Vector;
+  topSpeed: number;
   constructor(s: p5) {
     this.s = s;
     this.position = this.s.createVector(this.s.width / 2, this.s.height / 2);
     this.velocity = this.s.createVector(0, 0);
     this.acceleration = this.s.createVector(-0.001, 0.01);
+    this.topSpeed = 10;
   }
   update() {
     this.position.add(this.velocity);
     this.velocity.add(this.acceleration);
-    this.velocity.limit(10);
+    this.velocity.limit(this.topSpeed);
   }
   checkEdge() {
     if (this.position.x > this.s.width) {
