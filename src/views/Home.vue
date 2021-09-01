@@ -58,6 +58,11 @@
             VectorNormalize
           </router-link>
         </li>
+        <li>
+          <router-link :to="{ name: 'MotionBasic' }">
+            MotionBasic
+          </router-link>
+        </li>
       </ul>
     </section>
   </div>
