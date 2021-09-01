@@ -73,6 +73,11 @@
             MotionAccelerationRandom
           </router-link>
         </li>
+        <li>
+          <router-link :to="{ name: 'MotionAccelerationMouse' }">
+            MotionAccelerationMouse
+          </router-link>
+        </li>
       </ul>
     </section>
   </div>

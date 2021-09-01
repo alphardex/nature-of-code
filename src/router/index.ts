@@ -14,6 +14,7 @@ import VectorNormalize from "../views/VectorNormalize.vue";
 import MotionBasic from "../views/MotionBasic.vue";
 import MotionAccelerationConstant from "../views/MotionAccelerationConstant.vue";
 import MotionAccelerationRandom from "../views/MotionAccelerationRandom.vue";
+import MotionAccelerationMouse from "../views/MotionAccelerationMouse.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -85,6 +86,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/motion-acceleration-random",
     name: "MotionAccelerationRandom",
     component: MotionAccelerationRandom,
+  },
+  {
+    path: "/motion-acceleration-mouse",
+    name: "MotionAccelerationMouse",
+    component: MotionAccelerationMouse,
   },
   {
     path: "/:pathMatch(.*)*",
