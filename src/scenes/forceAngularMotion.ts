@@ -103,10 +103,10 @@ const sketch = (s: p5) => {
     const attractorPosition = s.createVector(s.width / 2, s.height / 2);
     attractor = new Attractor(s, attractorPosition, 20, 40);
 
-    for (let i = 0; i < 1; i++) {
+    for (let i = 0; i < 20; i++) {
       const x = s.random(s.width);
       const y = s.random(s.height);
-      const m = 4;
+      const m = s.random(2, 4);
       const r = m * 8;
       const moverPosition = s.createVector(x, y);
       const mover = new Mover(s, moverPosition, m, r);
