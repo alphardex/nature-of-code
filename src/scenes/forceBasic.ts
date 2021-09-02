@@ -64,7 +64,7 @@ const sketch = (s: p5) => {
 
   const draw = () => {
     movers.forEach((mover) => {
-      const gravity = s.createVector(0, 0.1);
+      const gravity = s.createVector(0, 0.1 * mover.mass);
       mover.applyForce(gravity);
       const wind = s.createVector(0.05, 0);
       mover.applyForce(wind);
