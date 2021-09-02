@@ -128,6 +128,11 @@
             PointingVelocity
           </router-link>
         </li>
+        <li>
+          <router-link :to="{ name: 'PolarToCartesian' }">
+            PolarToCartesian
+          </router-link>
+        </li>
       </ul>
     </section>
   </div>
