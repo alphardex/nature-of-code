@@ -138,6 +138,11 @@
             HarmonicMotion
           </router-link>
         </li>
+        <li>
+          <router-link :to="{ name: 'HarmonicMotionAngularVelocity' }">
+            HarmonicMotionAngularVelocity
+          </router-link>
+        </li>
       </ul>
     </section>
   </div>
