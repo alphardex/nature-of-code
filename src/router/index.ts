@@ -16,6 +16,8 @@ import MotionAccelerationConstant from "../views/MotionAccelerationConstant.vue"
 import MotionAccelerationRandom from "../views/MotionAccelerationRandom.vue";
 import MotionAccelerationMouse from "../views/MotionAccelerationMouse.vue";
 import ForceBasic from "../views/ForceBasic.vue";
+import ForceFriction from "../views/ForceFriction.vue";
+import ForceDrag from "../views/ForceDrag.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -97,6 +99,16 @@ const routes: Array<RouteRecordRaw> = [
     path: "/force-basic",
     name: "ForceBasic",
     component: ForceBasic,
+  },
+  {
+    path: "/force-friction",
+    name: "ForceFriction",
+    component: ForceFriction,
+  },
+  {
+    path: "/force-drag",
+    name: "ForceDrag",
+    component: ForceDrag,
   },
   {
     path: "/:pathMatch(.*)*",

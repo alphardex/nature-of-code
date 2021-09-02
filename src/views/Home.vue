@@ -78,9 +78,24 @@
             MotionAccelerationMouse
           </router-link>
         </li>
+      </ul>
+    </section>
+    <section>
+      <h1>2. Force</h1>
+      <ul>
         <li>
           <router-link :to="{ name: 'ForceBasic' }">
             ForceBasic
+          </router-link>
+        </li>
+        <li>
+          <router-link :to="{ name: 'ForceFriction' }">
+            ForceFriction
+          </router-link>
+        </li>
+        <li>
+          <router-link :to="{ name: 'ForceDrag' }">
+            ForceDrag
           </router-link>
         </li>
       </ul>
