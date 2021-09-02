@@ -133,6 +133,11 @@
             PolarToCartesian
           </router-link>
         </li>
+        <li>
+          <router-link :to="{ name: 'HarmonicMotion' }">
+            HarmonicMotion
+          </router-link>
+        </li>
       </ul>
     </section>
   </div>

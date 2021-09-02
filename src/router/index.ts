@@ -24,6 +24,7 @@ import AngularMotion from "../views/AngularMotion.vue";
 import ForceAngularMotion from "../views/ForceAngularMotion.vue";
 import PointingVelocity from "../views/PointingVelocity.vue";
 import PolarToCartesian from "../views/PolarToCartesian.vue";
+import HarmonicMotion from "../views/HarmonicMotion.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -145,6 +146,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/polar-to-cartesian",
     name: "PolarToCartesian",
     component: PolarToCartesian,
+  },
+  {
+    path: "/harmonic-motion",
+    name: "HarmonicMotion",
+    component: HarmonicMotion,
   },
   {
     path: "/:pathMatch(.*)*",
