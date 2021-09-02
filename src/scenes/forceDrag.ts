@@ -95,10 +95,10 @@ const sketch = (s: p5) => {
   const setup = () => {
     s.createCanvas(s.windowWidth, s.windowHeight);
 
-    for (let i = 0; i < 10; i++) {
-      const x = 0;
+    for (let i = 0; i < 100; i++) {
+      const x = s.random(0, s.width);
       const y = 0;
-      const m = s.random(0.1, 8);
+      const m = s.random(1, 8);
       const r = m * 8;
       const mover = new Mover(s, s.createVector(x, y), m, r);
       movers.push(mover);
