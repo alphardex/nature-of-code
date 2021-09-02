@@ -103,6 +103,11 @@
             ForceAttraction
           </router-link>
         </li>
+        <li>
+          <router-link :to="{ name: 'ForceAttractionMutual' }">
+            ForceAttractionMutual
+          </router-link>
+        </li>
       </ul>
     </section>
   </div>
