@@ -6,12 +6,14 @@ class Mover {
   velocity: p5.Vector;
   acceleration: p5.Vector;
   mass: number;
+  radius: number;
   constructor(s: p5, position = s.createVector(0, 0), mass = 1) {
     this.s = s;
     this.position = position;
     this.velocity = this.s.createVector(0, 0);
     this.acceleration = this.s.createVector(0, 0);
     this.mass = mass;
+    this.radius = this.mass * 8;
   }
   applyForce(force: p5.Vector) {
     // Newton Law 2: F = ma
@@ -40,7 +42,7 @@ class Mover {
     }
   }
   display() {
-    this.s.circle(this.position.x, this.position.y, 48);
+    this.s.circle(this.position.x, this.position.y, this.radius);
   }
 }
 
@@ -53,7 +55,7 @@ const sketch = (s: p5) => {
     for (let i = 0; i < 10; i++) {
       const x = s.width / 2;
       const y = s.random(0, s.height / 2);
-      const m = s.random(0.1, 5);
+      const m = s.random(0.1, 8);
       movers.push(new Mover(s, s.createVector(x, y), m));
     }
   };
