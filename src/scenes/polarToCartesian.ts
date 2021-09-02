@@ -6,8 +6,6 @@ const sketch = (s: p5) => {
 
   const setup = () => {
     s.createCanvas(s.windowWidth, s.windowHeight);
-
-    r = s.height * 0.45;
   };
 
   const draw = () => {
@@ -17,9 +15,9 @@ const sketch = (s: p5) => {
     let y = r * s.sin(theta);
 
     s.circle(x, y, 32);
-    s.line(0, 0, x, y);
 
     theta += 0.02;
+    r += 0.1;
   };
 
   s.setup = setup;
