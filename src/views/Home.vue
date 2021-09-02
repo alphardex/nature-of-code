@@ -98,6 +98,11 @@
             ForceDrag
           </router-link>
         </li>
+        <li>
+          <router-link :to="{ name: 'ForceAttraction' }">
+            ForceAttraction
+          </router-link>
+        </li>
       </ul>
     </section>
   </div>
