@@ -123,6 +123,11 @@
             ForceAngularMotion
           </router-link>
         </li>
+        <li>
+          <router-link :to="{ name: 'PointingVelocity' }">
+            PointingVelocity
+          </router-link>
+        </li>
       </ul>
     </section>
   </div>

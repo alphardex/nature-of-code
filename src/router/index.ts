@@ -22,6 +22,7 @@ import ForceAttraction from "../views/ForceAttraction.vue";
 import ForceAttractionMutual from "../views/ForceAttractionMutual.vue";
 import AngularMotion from "../views/AngularMotion.vue";
 import ForceAngularMotion from "../views/ForceAngularMotion.vue";
+import PointingVelocity from "../views/PointingVelocity.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -133,6 +134,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/force-angular-motion",
     name: "ForceAngularMotion",
     component: ForceAngularMotion,
+  },
+  {
+    path: "/pointing-velocity",
+    name: "PointingVelocity",
+    component: PointingVelocity,
   },
   {
     path: "/:pathMatch(.*)*",

@@ -27,6 +27,7 @@ class Mover extends PhysicsObject {
   angle: number;
   aVelocity: number;
   aAcceleration: number;
+  topSpeed: number;
   constructor(s: p5, position = s.createVector(0, 0), mass = 1, radius = 1) {
     super(s, position, mass, radius);
     this.velocity = this.s.createVector(0, 0);
@@ -34,6 +35,7 @@ class Mover extends PhysicsObject {
     this.angle = 0;
     this.aVelocity = 0;
     this.aAcceleration = 0.001;
+    this.topSpeed = 4;
   }
   applyForce(force: p5.Vector) {
     // Newton Law 2: F = ma
@@ -41,12 +43,14 @@ class Mover extends PhysicsObject {
     this.acceleration.add(acceleration);
   }
   update() {
+    const mouse = this.s.createVector(this.s.mouseX, this.s.mouseY);
+    const dir = p5.Vector.sub(mouse, this.position).setMag(0.5);
+    this.acceleration = dir;
+
     this.velocity.add(this.acceleration);
+    this.velocity.limit(this.topSpeed);
     this.position.add(this.velocity);
 
-    this.aAcceleration = this.acceleration.x / 10;
-    this.aVelocity += this.aAcceleration;
-    this.aVelocity = this.s.constrain(this.aVelocity, -0.1, 0.1);
     this.angle += this.aVelocity;
 
     this.acceleration.mult(0);
@@ -70,40 +74,21 @@ class Mover extends PhysicsObject {
   display() {
     this.s.push();
     this.s.translate(this.position.x, this.position.y);
-    this.s.rotate(this.angle);
+    const angle = this.velocity.heading();
+    this.s.rotate(angle);
     this.s.circle(0, 0, this.diameter);
     this.s.line(0, 0, this.radius, 0);
     this.s.pop();
   }
 }
 
-class Attractor extends PhysicsObject {
-  G: number;
-  constructor(s: p5, position = s.createVector(0, 0), mass = 1, radius = 1) {
-    super(s, position, mass, radius);
-    this.G = 1;
-  }
-  applyAttract(mover: Mover) {
-    const force = p5.Vector.sub(this.position, mover.position);
-    let r = force.mag();
-    r = this.s.constrain(r, 5, 25);
-    const strength = (this.G * (this.mass * mover.mass)) / r ** 2;
-    force.setMag(strength);
-    mover.applyForce(force);
-  }
-}
-
 const sketch = (s: p5) => {
-  let attractor: Attractor;
   let movers: Mover[] = [];
 
   const setup = () => {
     s.createCanvas(s.windowWidth, s.windowHeight);
 
-    const attractorPosition = s.createVector(s.width / 2, s.height / 2);
-    attractor = new Attractor(s, attractorPosition, 20, 40);
-
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 1; i++) {
       const x = s.random(s.width);
       const y = s.random(s.height);
       const m = s.random(2, 4);
@@ -115,11 +100,7 @@ const sketch = (s: p5) => {
   };
 
   const draw = () => {
-    attractor.display();
-
     movers.forEach((mover) => {
-      attractor.applyAttract(mover);
-
       mover.update();
       mover.checkEdge();
       mover.display();
