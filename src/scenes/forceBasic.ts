@@ -5,37 +5,38 @@ class Mover {
   position: p5.Vector;
   velocity: p5.Vector;
   acceleration: p5.Vector;
-  topSpeed: number;
-  constructor(s: p5) {
+  mass: number;
+  constructor(s: p5, position = s.createVector(0, 0), mass = 1) {
     this.s = s;
-    this.position = this.s.createVector(
-      this.s.random(this.s.width),
-      this.s.random(this.s.height)
-    );
+    this.position = position;
     this.velocity = this.s.createVector(0, 0);
     this.acceleration = this.s.createVector(0, 0);
-    this.topSpeed = 10;
+    this.mass = mass;
+  }
+  applyForce(force: p5.Vector) {
+    // Newton Law 2: F = ma
+    const acceleration = p5.Vector.div(force, this.mass);
+    this.acceleration.add(acceleration);
   }
   update() {
-    const mouse = this.s.createVector(this.s.mouseX, this.s.mouseY);
-    const direction = p5.Vector.sub(mouse, this.position);
-    this.acceleration = direction;
-    this.acceleration.setMag(0.2);
-
     this.velocity.add(this.acceleration);
-    this.velocity.limit(this.topSpeed);
     this.position.add(this.velocity);
+    this.acceleration.mult(0);
   }
   checkEdge() {
     if (this.position.x > this.s.width) {
-      this.position.x = 0;
-    } else if (this.position.x < 0) {
       this.position.x = this.s.width;
+      this.velocity.x *= -1;
+    } else if (this.position.x < 0) {
+      this.position.x = 0;
+      this.velocity.x *= -1;
     }
     if (this.position.y > this.s.height) {
-      this.position.y = 0;
-    } else if (this.position.y < 0) {
       this.position.y = this.s.height;
+      this.velocity.y *= -1;
+    } else if (this.position.y < 0) {
+      this.position.y = 0;
+      this.velocity.y *= -1;
     }
   }
   display() {
@@ -50,12 +51,21 @@ const sketch = (s: p5) => {
     s.createCanvas(s.windowWidth, s.windowHeight);
 
     for (let i = 0; i < 10; i++) {
-      movers[i] = new Mover(s);
+      const x = s.width / 2;
+      const y = s.random(0, s.height / 2);
+      const m = s.random(0.1, 5);
+      movers.push(new Mover(s, s.createVector(x, y), m));
     }
   };
 
   const draw = () => {
     movers.forEach((mover) => {
+      const gravity = s.createVector(0, 0.1);
+      mover.applyForce(gravity);
+      if (s.mouseIsPressed) {
+        const wind = s.createVector(0.1, 0);
+        mover.applyForce(wind);
+      }
       mover.update();
       mover.checkEdge();
       mover.display();

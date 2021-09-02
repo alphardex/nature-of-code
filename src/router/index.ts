@@ -15,6 +15,7 @@ import MotionBasic from "../views/MotionBasic.vue";
 import MotionAccelerationConstant from "../views/MotionAccelerationConstant.vue";
 import MotionAccelerationRandom from "../views/MotionAccelerationRandom.vue";
 import MotionAccelerationMouse from "../views/MotionAccelerationMouse.vue";
+import ForceBasic from "../views/ForceBasic.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -91,6 +92,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/motion-acceleration-mouse",
     name: "MotionAccelerationMouse",
     component: MotionAccelerationMouse,
+  },
+  {
+    path: "/force-basic",
+    name: "ForceBasic",
+    component: ForceBasic,
   },
   {
     path: "/:pathMatch(.*)*",

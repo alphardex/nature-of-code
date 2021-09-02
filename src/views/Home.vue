@@ -78,6 +78,11 @@
             MotionAccelerationMouse
           </router-link>
         </li>
+        <li>
+          <router-link :to="{ name: 'ForceBasic' }">
+            ForceBasic
+          </router-link>
+        </li>
       </ul>
     </section>
   </div>
