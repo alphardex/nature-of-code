@@ -21,6 +21,7 @@ import ForceDrag from "../views/ForceDrag.vue";
 import ForceAttraction from "../views/ForceAttraction.vue";
 import ForceAttractionMutual from "../views/ForceAttractionMutual.vue";
 import AngularMotion from "../views/AngularMotion.vue";
+import ForceAngularMotion from "../views/ForceAngularMotion.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -127,6 +128,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/angular-motion",
     name: "AngularMotion",
     component: AngularMotion,
+  },
+  {
+    path: "/force-angular-motion",
+    name: "ForceAngularMotion",
+    component: ForceAngularMotion,
   },
   {
     path: "/:pathMatch(.*)*",

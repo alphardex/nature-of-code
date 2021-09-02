@@ -108,9 +108,19 @@
             ForceAttractionMutual
           </router-link>
         </li>
+      </ul>
+    </section>
+    <section>
+      <h1>3. Oscillation</h1>
+      <ul>
         <li>
           <router-link :to="{ name: 'AngularMotion' }">
             AngularMotion
+          </router-link>
+        </li>
+        <li>
+          <router-link :to="{ name: 'ForceAngularMotion' }">
+            ForceAngularMotion
           </router-link>
         </li>
       </ul>
