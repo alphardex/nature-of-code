@@ -143,6 +143,11 @@
             HarmonicMotionAngularVelocity
           </router-link>
         </li>
+        <li>
+          <router-link :to="{ name: 'OscillatorObject' }">
+            OscillatorObject
+          </router-link>
+        </li>
       </ul>
     </section>
   </div>

@@ -26,6 +26,7 @@ import PointingVelocity from "../views/PointingVelocity.vue";
 import PolarToCartesian from "../views/PolarToCartesian.vue";
 import HarmonicMotion from "../views/HarmonicMotion.vue";
 import HarmonicMotionAngularVelocity from "../views/HarmonicMotionAngularVelocity.vue";
+import OscillatorObject from "../views/OscillatorObject.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -157,6 +158,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/harmonic-motion-angular-velocity",
     name: "HarmonicMotionAngularVelocity",
     component: HarmonicMotionAngularVelocity,
+  },
+  {
+    path: "/oscillator-object",
+    name: "OscillatorObject",
+    component: OscillatorObject,
   },
   {
     path: "/:pathMatch(.*)*",
