@@ -108,6 +108,11 @@
             ForceAttractionMutual
           </router-link>
         </li>
+        <li>
+          <router-link :to="{ name: 'AngularMotion' }">
+            AngularMotion
+          </router-link>
+        </li>
       </ul>
     </section>
   </div>
