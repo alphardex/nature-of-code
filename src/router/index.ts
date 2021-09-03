@@ -38,6 +38,7 @@ import ParticlesInheritance from "../views/ParticlesInheritance.vue";
 import ParticlesForce from "../views/ParticlesForce.vue";
 import ParticlesRepeller from "../views/ParticlesRepeller.vue";
 import ParticlesSmoke from "../views/ParticlesSmoke.vue";
+import Seek from "../views/Seek.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -229,6 +230,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/particles-smoke",
     name: "ParticlesSmoke",
     component: ParticlesSmoke,
+  },
+  {
+    path: "/seek",
+    name: "Seek",
+    component: Seek,
   },
   {
     path: "/:pathMatch(.*)*",

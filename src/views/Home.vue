@@ -210,6 +210,16 @@
         </li>
       </ul>
     </section>
+    <section>
+      <h1>6. Autonomous Agents</h1>
+      <ul>
+        <li>
+          <router-link :to="{ name: 'Seek' }">
+            Seek
+          </router-link>
+        </li>
+      </ul>
+    </section>
   </div>
 </template>
 
