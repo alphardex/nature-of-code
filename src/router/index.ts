@@ -28,6 +28,7 @@ import HarmonicMotion from "../views/HarmonicMotion.vue";
 import HarmonicMotionAngularVelocity from "../views/HarmonicMotionAngularVelocity.vue";
 import OscillatorObject from "../views/OscillatorObject.vue";
 import StaticWave from "../views/StaticWave.vue";
+import PendulumExample from "../views/PendulumExample.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -169,6 +170,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/static-wave",
     name: "StaticWave",
     component: StaticWave,
+  },
+  {
+    path: "/pendulum-example",
+    name: "PendulumExample",
+    component: PendulumExample,
   },
   {
     path: "/:pathMatch(.*)*",

@@ -153,6 +153,11 @@
             StaticWave
           </router-link>
         </li>
+        <li>
+          <router-link :to="{ name: 'PendulumExample' }">
+            PendulumExample
+          </router-link>
+        </li>
       </ul>
     </section>
   </div>
