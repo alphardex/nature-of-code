@@ -30,6 +30,8 @@ import OscillatorObject from "../views/OscillatorObject.vue";
 import StaticWave from "../views/StaticWave.vue";
 import PendulumExample from "../views/PendulumExample.vue";
 import SpringExample from "../views/SpringExample.vue";
+import SingleParticle from "../views/SingleParticle.vue";
+import ArrayParticles from "../views/ArrayParticles.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -181,6 +183,16 @@ const routes: Array<RouteRecordRaw> = [
     path: "/spring-example",
     name: "SpringExample",
     component: SpringExample,
+  },
+  {
+    path: "/single-particle",
+    name: "SingleParticle",
+    component: SingleParticle,
+  },
+  {
+    path: "/array-particles",
+    name: "ArrayParticles",
+    component: ArrayParticles,
   },
   {
     path: "/:pathMatch(.*)*",
