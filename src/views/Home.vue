@@ -218,6 +218,11 @@
             Seek
           </router-link>
         </li>
+        <li>
+          <router-link :to="{ name: 'Arrive' }">
+            Arrive
+          </router-link>
+        </li>
       </ul>
     </section>
   </div>

@@ -39,6 +39,7 @@ import ParticlesForce from "../views/ParticlesForce.vue";
 import ParticlesRepeller from "../views/ParticlesRepeller.vue";
 import ParticlesSmoke from "../views/ParticlesSmoke.vue";
 import Seek from "../views/Seek.vue";
+import Arrive from "../views/Arrive.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -235,6 +236,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/seek",
     name: "Seek",
     component: Seek,
+  },
+  {
+    path: "/arrive",
+    name: "Arrive",
+    component: Arrive,
   },
   {
     path: "/:pathMatch(.*)*",
