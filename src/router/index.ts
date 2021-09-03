@@ -34,6 +34,7 @@ import SingleParticle from "../views/SingleParticle.vue";
 import ArrayParticles from "../views/ArrayParticles.vue";
 import ParticleSystem from "../views/ParticleSystem.vue";
 import SystemGenerator from "../views/SystemGenerator.vue";
+import ParticlesInheritance from "../views/ParticlesInheritance.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -205,6 +206,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/system-generator",
     name: "SystemGenerator",
     component: SystemGenerator,
+  },
+  {
+    path: "/particles-inheritance",
+    name: "ParticlesInheritance",
+    component: ParticlesInheritance,
   },
   {
     path: "/:pathMatch(.*)*",

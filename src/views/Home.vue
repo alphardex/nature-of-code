@@ -188,6 +188,11 @@
             SystemGenerator
           </router-link>
         </li>
+        <li>
+          <router-link :to="{ name: 'ParticlesInheritance' }">
+            ParticlesInheritance
+          </router-link>
+        </li>
       </ul>
     </section>
   </div>
