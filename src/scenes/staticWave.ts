@@ -10,6 +10,8 @@ const sketch = (s: p5) => {
   };
 
   const draw = () => {
+    s.background(255);
+
     s.translate(0, s.height / 2);
 
     startAngle += 0.015;

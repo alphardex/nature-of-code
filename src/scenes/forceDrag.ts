@@ -109,6 +109,8 @@ const sketch = (s: p5) => {
   };
 
   const draw = () => {
+    s.background(255);
+
     liquid.display();
 
     movers.forEach((mover) => {

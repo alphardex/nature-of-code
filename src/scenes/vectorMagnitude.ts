@@ -6,6 +6,8 @@ const sketch = (s: p5) => {
   };
 
   const draw = () => {
+    s.background(255);
+
     let mouse = s.createVector(s.mouseX, s.mouseY);
     let center = s.createVector(s.width / 2, s.height / 2);
     mouse.sub(center);

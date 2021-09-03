@@ -116,6 +116,8 @@ const sketch = (s: p5) => {
   };
 
   const draw = () => {
+    s.background(255);
+
     s.translate(s.width / 2, s.height / 2);
 
     const gravity = s.createVector(0, 9.8);

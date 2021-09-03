@@ -70,6 +70,8 @@ const sketch = (s: p5) => {
   };
 
   const draw = () => {
+    s.background(255);
+
     movers.forEach((mover) => {
       mover.applyFriction(0.01);
       const gravity = s.createVector(0, 0.1 * mover.mass);

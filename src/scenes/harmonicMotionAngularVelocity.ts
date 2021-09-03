@@ -9,6 +9,8 @@ const sketch = (s: p5) => {
   };
 
   const draw = () => {
+    s.background(255);
+
     const amplitude = 100;
 
     const x = s.sin(angle) * amplitude;

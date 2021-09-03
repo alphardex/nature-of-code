@@ -80,6 +80,8 @@ const sketch = (s: p5) => {
   };
 
   const draw = () => {
+    s.background(255);
+
     for (let i = 0; i < movers.length; i++) {
       for (let j = 0; j < movers.length; j++) {
         if (i !== j) {

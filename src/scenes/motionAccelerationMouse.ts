@@ -55,6 +55,8 @@ const sketch = (s: p5) => {
   };
 
   const draw = () => {
+    s.background(255);
+
     movers.forEach((mover) => {
       mover.update();
       mover.checkEdge();
