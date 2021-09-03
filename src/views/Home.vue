@@ -198,6 +198,11 @@
             ParticlesForce
           </router-link>
         </li>
+        <li>
+          <router-link :to="{ name: 'ParticlesRepeller' }">
+            ParticlesRepeller
+          </router-link>
+        </li>
       </ul>
     </section>
   </div>
