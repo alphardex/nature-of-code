@@ -9,7 +9,7 @@ class Particle {
   lifespan: number;
   constructor(s: p5, position = s.createVector(0, 0), size = 12) {
     this.s = s;
-    this.position = position;
+    this.position = position.copy();
     this.velocity = this.s.createVector(s.random(-1, 1), s.random(-1, 1));
     this.acceleration = this.s.createVector(0, 0.05);
     this.size = size;

@@ -178,6 +178,11 @@
             ArrayParticles
           </router-link>
         </li>
+        <li>
+          <router-link :to="{ name: 'ParticleSystem' }">
+            ParticleSystem
+          </router-link>
+        </li>
       </ul>
     </section>
   </div>

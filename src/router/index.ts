@@ -32,6 +32,7 @@ import PendulumExample from "../views/PendulumExample.vue";
 import SpringExample from "../views/SpringExample.vue";
 import SingleParticle from "../views/SingleParticle.vue";
 import ArrayParticles from "../views/ArrayParticles.vue";
+import ParticleSystem from "../views/ParticleSystem.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -193,6 +194,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/array-particles",
     name: "ArrayParticles",
     component: ArrayParticles,
+  },
+  {
+    path: "/particle-system",
+    name: "ParticleSystem",
+    component: ParticleSystem,
   },
   {
     path: "/:pathMatch(.*)*",

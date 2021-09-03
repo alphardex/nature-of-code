@@ -34,23 +34,41 @@ class Particle {
   }
 }
 
+class ParticleSystem {
+  s: p5;
+  particles: Particle[];
+  origin: p5.Vector;
+  constructor(s: p5, origin = s.createVector(0, 0)) {
+    this.s = s;
+    this.particles = [];
+    this.origin = origin;
+  }
+  addParticle() {
+    const particle = new Particle(this.s, this.origin);
+    this.particles.push(particle);
+  }
+  run() {
+    for (const particle of this.particles) {
+      particle.run();
+    }
+    this.particles = this.particles.filter((p) => !p.isDead);
+  }
+}
+
 const sketch = (s: p5) => {
-  let p: Particle;
+  let ps: ParticleSystem;
 
   const setup = () => {
     s.createCanvas(s.windowWidth, s.windowHeight);
 
-    p = new Particle(s, s.createVector(s.width / 2, 20));
+    ps = new ParticleSystem(s, s.createVector(s.width / 2, 50));
   };
 
   const draw = () => {
     s.background(255);
 
-    p.run();
-
-    if (p.isDead) {
-      console.log("p is dead");
-    }
+    ps.addParticle();
+    ps.run();
   };
 
   s.setup = setup;
