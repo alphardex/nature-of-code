@@ -37,6 +37,7 @@ import SystemGenerator from "../views/SystemGenerator.vue";
 import ParticlesInheritance from "../views/ParticlesInheritance.vue";
 import ParticlesForce from "../views/ParticlesForce.vue";
 import ParticlesRepeller from "../views/ParticlesRepeller.vue";
+import ParticlesSmoke from "../views/ParticlesSmoke.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -223,6 +224,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/particles-repeller",
     name: "ParticlesRepeller",
     component: ParticlesRepeller,
+  },
+  {
+    path: "/particles-smoke",
+    name: "ParticlesSmoke",
+    component: ParticlesSmoke,
   },
   {
     path: "/:pathMatch(.*)*",

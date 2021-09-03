@@ -203,6 +203,11 @@
             ParticlesRepeller
           </router-link>
         </li>
+        <li>
+          <router-link :to="{ name: 'ParticlesSmoke' }">
+            ParticlesSmoke
+          </router-link>
+        </li>
       </ul>
     </section>
   </div>
