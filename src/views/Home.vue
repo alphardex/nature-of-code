@@ -183,6 +183,11 @@
             ParticleSystem
           </router-link>
         </li>
+        <li>
+          <router-link :to="{ name: 'SystemGenerator' }">
+            SystemGenerator
+          </router-link>
+        </li>
       </ul>
     </section>
   </div>

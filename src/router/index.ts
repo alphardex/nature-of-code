@@ -33,6 +33,7 @@ import SpringExample from "../views/SpringExample.vue";
 import SingleParticle from "../views/SingleParticle.vue";
 import ArrayParticles from "../views/ArrayParticles.vue";
 import ParticleSystem from "../views/ParticleSystem.vue";
+import SystemGenerator from "../views/SystemGenerator.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -199,6 +200,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/particle-system",
     name: "ParticleSystem",
     component: ParticleSystem,
+  },
+  {
+    path: "/system-generator",
+    name: "SystemGenerator",
+    component: SystemGenerator,
   },
   {
     path: "/:pathMatch(.*)*",
