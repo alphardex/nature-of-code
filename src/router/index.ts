@@ -35,6 +35,7 @@ import ArrayParticles from "../views/ArrayParticles.vue";
 import ParticleSystem from "../views/ParticleSystem.vue";
 import SystemGenerator from "../views/SystemGenerator.vue";
 import ParticlesInheritance from "../views/ParticlesInheritance.vue";
+import ParticlesForce from "../views/ParticlesForce.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -211,6 +212,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/particles-inheritance",
     name: "ParticlesInheritance",
     component: ParticlesInheritance,
+  },
+  {
+    path: "/particles-force",
+    name: "ParticlesForce",
+    component: ParticlesForce,
   },
   {
     path: "/:pathMatch(.*)*",

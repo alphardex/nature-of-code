@@ -193,6 +193,11 @@
             ParticlesInheritance
           </router-link>
         </li>
+        <li>
+          <router-link :to="{ name: 'ParticlesForce' }">
+            ParticlesForce
+          </router-link>
+        </li>
       </ul>
     </section>
   </div>
