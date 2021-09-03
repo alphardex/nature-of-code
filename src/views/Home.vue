@@ -148,6 +148,11 @@
             OscillatorObject
           </router-link>
         </li>
+        <li>
+          <router-link :to="{ name: 'StaticWave' }">
+            StaticWave
+          </router-link>
+        </li>
       </ul>
     </section>
   </div>

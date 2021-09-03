@@ -27,6 +27,7 @@ import PolarToCartesian from "../views/PolarToCartesian.vue";
 import HarmonicMotion from "../views/HarmonicMotion.vue";
 import HarmonicMotionAngularVelocity from "../views/HarmonicMotionAngularVelocity.vue";
 import OscillatorObject from "../views/OscillatorObject.vue";
+import StaticWave from "../views/StaticWave.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -163,6 +164,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/oscillator-object",
     name: "OscillatorObject",
     component: OscillatorObject,
+  },
+  {
+    path: "/static-wave",
+    name: "StaticWave",
+    component: StaticWave,
   },
   {
     path: "/:pathMatch(.*)*",
